@@ -1,38 +1,132 @@
+/* App Container */
 .App {
+  max-width: 650px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  font-family: "Roboto", Arial, sans-serif;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Fade‑In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Title */
+.App h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Input Form */
+form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #dcdfe6;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  padding: 0 1rem;
+  background: #4caf50;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #45a049;
+  transform: translateY(-1px);
+}
+
+/* Filter Buttons */
+div > button {
+  margin: 0 0.25rem;
+  padding: 0.5rem 0.75rem;
+  background: #f0f0f0;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+div > button:disabled {
+  background: #007bff;
   color: white;
+  border-color: #007bff;
 }
 
-.App-link {
-  color: #61dafb;
+/* Task List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li {
+  display: flex;
+  align-items: center;
+  background: #fdfdfd;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+li:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+li span {
+  flex: 1;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+li span.completed {
+  text-decoration: line-through;
+  color: #7f8c8d;
+}
+
+li input[type="checkbox"] {
+  margin-right: 0.75rem;
+  width: 18px;
+  height: 18px;
+}
+
+li button {
+  background: transparent;
+  border: none;
+  color: #e74c3c;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+li button:hover {
+  color: #c0392b;
 }
