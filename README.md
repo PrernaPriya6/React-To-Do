@@ -1,3 +1,17 @@
+# React To‑Do List App
+A clean and functional To‑Do List built with React — featuring task addition, removal, marking complete/incomplete, filtering (All/Active/Completed), input validation, sorting (newest-first by default), and `localStorage` persistence.
+
+**Testing Guidance:-**
+1.Add Tasks — enter text and click Add (empty tasks are ignored).
+2.Remove Tasks — click the “×” next to any task.
+3.Toggle Completion — check/uncheck to mark tasks as done or pending.
+4.Filter Views — switch between All, Active, and Completed tasks.
+5.Persist Data — tasks are saved in `localStorage`, so data survives page reloads.
+6.Optional Sorting— tasks appear newest-first by default.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
